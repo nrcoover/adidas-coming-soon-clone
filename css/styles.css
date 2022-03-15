@@ -15,6 +15,7 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
+    border-style: none;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -22,7 +23,7 @@
 }
   
 :root {
-    --theme-color-black: #333333;
+    --theme-color-black: #333333; /* rgba(51, 51, 51, 1) */
     --theme-color-brown: #423A3A; 
     --theme-color-red: #CD3A24;
     --theme-color-white: #FEFFFF; /* rgba(254, 255, 255, 1) */
@@ -108,6 +109,42 @@ html, body {
     .text-info p {
         color: var(--theme-color-black);
         line-height: 24px;
-        text-align: justify;
         text-align-last: center;
     }
+
+    .text-info .email-signup {
+        margin: 1rem 0 4.5rem;
+        width: 100%;
+    }
+    
+        .email-signup .email-input {
+            border: 1px solid rgba(51, 51, 51, .7);
+            border-radius: 3px;
+            padding: 1rem 1.5rem;
+            opacity: .5;
+            width: 100%;
+        }
+
+        /* .email-signup input:active {
+            border: 1px solid var(--theme-color-red);
+            border-radius: 3px;
+        } */
+
+
+        .email-signup .email-submit {
+            background-color: var(--theme-color-black);
+            border: 1px solid var(--theme-color-black);
+            border-radius: 2px;
+            color: var(--theme-color-white);
+            font-weight: bold;
+            opacity: 1;
+            padding: 1rem 1.5rem;
+            position: absolute;
+            right: 0;
+            margin-right: 2.5rem;
+            z-index: 10;
+        }
+
+        .email-signup .email.submit:hover {
+            cursor: pointer;
+        }
