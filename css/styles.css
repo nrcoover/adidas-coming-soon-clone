@@ -1,3 +1,18 @@
+/* ---------- USE FOR CODEPEN VERSION ---------- */
+/* @font-face {
+    font-family: 'AdiHaus';
+    src: url('https://assets.codepen.io/6060109/adihaus_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AdiHaus";
+    src: url("https://assets.codepen.io/6060109/adihaus_bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+} */
+
 *, *::before, *::after {
     box-sizing: border-box;
     list-style: none;
@@ -7,21 +22,22 @@
 }
   
 :root {
-    --theme-color-black: #17252A; /* rgba(23,37,42,1) */
-    --theme-color-dark: #2B7A78; /* rgba(43,122,120, 1) */
-    --theme-color-main: #3AAFA9; /* rgba(58, 175, 169, 1) */
-    --theme-color-light: #DEF2F1; /* rgba(222,242,241,1) */
+    --theme-color-black: #333333;
+    --theme-color-brown: #423A3A; 
+    --theme-color-red: #CD3A24;
     --theme-color-white: #FEFFFF; /* rgba(254, 255, 255, 1) */
 }
   
 /* ---------- MAIN BODY DECLERATIONS ---------- */
-  
+
 html, body {
-    font-family: Montserrat, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.2px;
     background-color: var(--theme-color-white);
+    font-family: "AdiHaus";
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 14px;
+    /* line-height: 24px; */
+    /* letter-spacing: 0.2px; */
     min-height: 100%;
     min-width: 100%;
 }
@@ -50,9 +66,48 @@ html, body {
 
 .hero-banner .hero-image {
     background-image: url(/images/girl-close-up.png);
+    /* alternate image for codepen version */
+    /* background-image: url(://assets.codepen.io/6060109/athlete-girl.png); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 376px;
     width: 100vw;
 }
+
+/* ---------- TEXT INFO DECLERATIONS ---------- */
+.text-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+    .text-info > * {
+        padding: 0 2.5rem 1rem;
+    }
+
+    /* intended for the first h2 within .text-info */
+    .text-info h2:nth-child(1) {
+        color: var(--theme-color-red);
+        font-weight: normal;
+        padding-top: 1.8rem;
+        padding-bottom: 1rem;
+    }
+
+    .text-info h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: var(--theme-color-brown);
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .text-info p {
+        color: var(--theme-color-black);
+        line-height: 24px;
+        text-align: justify;
+        text-align-last: center;
+    }
