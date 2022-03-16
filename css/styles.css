@@ -37,15 +37,18 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Ropa Sans', sans-serif;
     font-size: 14px;
-    /* line-height: 24px; */
-    /* letter-spacing: 0.2px; */
-    min-height: 100%;
-    min-width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 .mobile-container {
-    max-width: 500px;
     margin: 0 auto;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+.hero-image-desktop {
+    display: none;
 }
 
 /* ---------- HERO BANNER DECLERATIONS ---------- */
@@ -113,7 +116,6 @@ html, body {
     .text-info p {
         color: var(--theme-color-black);
         line-height: 24px;
-        text-align-last: center;
     }
 
     .text-info .email-signup {
@@ -153,3 +155,79 @@ html, body {
         .email-signup .email.submit:hover {
             cursor: pointer;
         }
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-image: url(/images/desktop-bg-white.PNG);
+        /* alternate background source for codepen version */
+        /* background-image: url(https://assets.codepen.io/6060109/destop-bg.png); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-left: 3.5rem;
+        padding-top: 25%;
+    }
+
+    .mobile-container {
+        width: 45vw;
+    }
+
+    .hero-banner .logo-wrapper {
+        margin-top: 2rem;
+        margin-left: 3.5rem;
+        width: 100%;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+    }
+        .logo-wrapper img {
+            margin: 0 0 0;
+            padding-left: 2.5rem;
+        }
+
+    .hero-image {
+        display: none;
+    }
+
+    .text-info {
+        text-align: left;
+        align-items: start;
+    }
+    
+        .text-info h2 {
+            font-size: 4.5rem;
+        }
+
+        .text-info p {
+            font-size: 16px;
+        }
+
+        .text-info input {
+            font-size: 16px;
+        }
+
+    .hero-image-desktop {
+        display: inline-block;
+        height: 100%;
+        width: 55vw;
+    }
+
+    .hero-image-desktop img {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+}
