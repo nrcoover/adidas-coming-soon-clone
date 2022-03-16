@@ -1,5 +1,5 @@
-/* ---------- USE FOR CODEPEN VERSION ---------- */
-/* @font-face {
+/* ---------- SETTING FONTS ---------- */
+@font-face {
     font-family: 'AdiHaus';
     src: url('https://assets.codepen.io/6060109/adihaus_regular.ttf') format('truetype');
     font-weight: normal;
@@ -11,7 +11,7 @@
     src: url("https://assets.codepen.io/6060109/adihaus_bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
-} */
+}
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -34,11 +34,13 @@
 html, body {
     background-color: var(--theme-color-white);
     font-family: "AdiHaus";
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Ropa Sans', sans-serif;
     font-size: 14px;
     height: 100%;
     width: 100%;
+}
+
+input {
+    font-family: 'AdiHaus';
 }
 
 .mobile-container {
@@ -75,7 +77,7 @@ html, body {
 .hero-banner .hero-image {
     background-image: url(/images/girl-close-up.png);
     /* alternate image for codepen version */
-    /* background-image: url(://assets.codepen.io/6060109/athlete-girl.png); */
+    /* background-image: url(https://assets.codepen.io/6060109/athlete-girl.png); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -105,7 +107,6 @@ html, body {
     }
 
     .text-info h2 {
-        font-family: 'Montserrat', sans-serif;
         font-size: 3.5rem;
         font-weight: bold;
         color: var(--theme-color-brown);
@@ -119,7 +120,7 @@ html, body {
     }
 
     .text-info .email-signup {
-        margin: 1rem 0 4.5rem;
+        margin: 1rem 0 6rem;
         position: relative;
         width: 100%;
     }
@@ -128,19 +129,21 @@ html, body {
             border: 1px solid rgba(51, 51, 51, .7);
             border-radius: 3px;
             padding: 1rem 1.5rem;
+            padding-right: 5.5rem;
             opacity: .5;
             width: 100%;
         }
 
-        /* .email-signup input:active {
-            border: 1px solid var(--theme-color-red);
-            border-radius: 3px;
-        } */
+        .email-signup .email-input:focus {
+            background-color: var(--theme-color-white);
+            outline: 2px solid var(--theme-color-black);
+            opacity: 1;
+        }
 
 
         .email-signup .email-submit {
             background-color: var(--theme-color-black);
-            border: 1px solid var(--theme-color-black);
+            border-bottom: 1px solid var(--theme-color-black);
             border-radius: 2px;
             color: var(--theme-color-white);
             font-weight: bold;
@@ -172,20 +175,20 @@ html, body {
     main {
         display: flex;
         flex-direction: column;
-        height: auto;
-        justify-content: center;
+        height: inherit;
         max-width: 100%;
         margin: 0 auto;
         padding-left: 3.5rem;
-        padding-top: 25%;
     }
 
     .mobile-container {
         width: 45vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
     .hero-banner .logo-wrapper {
-        margin-top: 2rem;
         margin-left: 3.5rem;
         width: 100%;
         display: flex;
@@ -229,5 +232,9 @@ html, body {
         height: 100%;
         object-fit: cover;
         width: 100%;
+    }
+
+    .email-signup .email-submit {
+        border-bottom: 3px solid var(--theme-color-black);
     }
 }
