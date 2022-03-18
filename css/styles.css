@@ -146,6 +146,7 @@ input {
             border-bottom: 1px solid var(--theme-color-black);
             border-radius: 2px;
             color: var(--theme-color-white);
+            cursor: pointer;
             font-weight: bold;
             opacity: 1;
             padding: 1rem 1.5rem;
@@ -155,9 +156,6 @@ input {
             z-index: 10;
         }
 
-        .email-signup .email.submit:hover {
-            cursor: pointer;
-        }
 
 @media only screen and (min-width: 768px) {
     body {
